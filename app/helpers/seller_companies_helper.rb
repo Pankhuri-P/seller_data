@@ -1,0 +1,2 @@
+module SellerCompaniesHelper
+end

@@ -12,10 +12,4 @@ class Seller < ActiveRecord::Base
 	has_one :address, as: :addressable, dependent: :destroy
 	has_one :contact, as: :contactable, dependent: :destroy
 
-
-	validates :name, presence: true, length: { within: 2..70 }
-	validates :seller_company, presence: true
-	#validates :seller_tax_id, presence: true
-	validates :seller_type, presence: true
-
 end

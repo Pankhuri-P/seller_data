@@ -9,7 +9,7 @@ common: &default_settings
 
 development:
   <<: *default_settings
-  database: figs_dev3
+  database: figs_seller_data_dev
 
 test:
   <<: *default_settings

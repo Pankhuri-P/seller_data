@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Service Orders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @service_orders.each do |service_order| %>
+      <tr>
+	<td><%= service_order.name %></td>
+        <td><%= link_to 'Show', seller_service_order_path(seller_id: @seller.id, id: service_order.id) %></td>
+        <td><%= link_to 'Edit', edit_seller_service_order_path(seller_id: @seller.id, id: service_order) %></td>
+        <td><%= link_to 'Destroy', "/sellers/#{@seller.id}/service_orders/#{service_order.id}", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Service order', new_seller_service_order_path %>

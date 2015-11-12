@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Seller Charges</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @seller_charges.each do |seller_charge| %>
+      <tr>
+        <td><%= link_to 'Show', seller_seller_charge_path(seller_id: @seller.id, id: seller_charge.id) %></td>
+        <td><%= link_to 'Edit', edit_seller_seller_charge_path(seller_id: @seller.id, id: seller_charge.id) %></td>
+        <td><%= link_to 'Destroy', "/sellers/#{@seller}/seller_charges/#{seller_charge.id}", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Seller charge', new_seller_seller_charge_path %>

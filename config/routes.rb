@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :sellers do
     resources :service_orders
+    resources :seller_charges
   end
   resources :seller_companies
   # The priority is based upon order of creation: first created -> highest priority.
